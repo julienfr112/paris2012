@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.arrondissement {
+  fill: #ccc;
+  fill-opacity:0.2;
+  stroke: #000;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+}
+
+.ump {
+  background: #aaf3;
+  border: 1px #339;
+  border-radius:.5em;
+  background:-webkit-gradient(linear,left top,left bottom,from(#aaf),to(#88d));
+  background:-moz-linear-gradient(top,#aaf,#88d);
+}
+
+.ps {
+  background: #f46;
+  border: 1px #000;
+  border-radius:.3em;
+  -moz-border-radius:.3em;
+  -webkit-border-radius:.3em;
+  background:-webkit-gradient(linear,left top,left bottom,from(#f46),to(#f68));
+  background:-moz-linear-gradient(top,#f46,#f68);
+}
+
+.arrondissement.zoom {
+  fill: #eee;
+  fill-opacity:0.2;
+  stroke: #555;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+}
+
+.arrondissement.zoom.aucentre {
+  fill: #ccc;
+  fill-opacity:0.2;
+  stroke: #000;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+
+.bureau.aucentre {
+  stroke: #000;
+  stroke-width: .2px;
+  stroke-linejoin: round;
+}
+
+.rues {
+  stroke: #000;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  opacity: .5;
+}
+
+
+.ligne {
+  stroke-width: 3px;
+  stroke: #00b;
+  fill: none;
+  stroke-linejoin: round;
+}
+
+
+.axis path,.axis line{
+  fill:none;
+  stroke:#000;
+  stroke-width:1px;
+}
+
+.background{
+fill: #FFF;
+}
+.q0 { stroke:rgb(247,251,255); }
+.q1 { stroke:rgb(222,235,247); }
+.q2 { stroke:rgb(198,219,239); }
+.q3 { stroke:rgb(158,202,225); }
+.q4 { stroke:rgb(107,174,214); }
+.q5 { stroke:rgb(66,146,198); }
+.q6 { stroke:rgb(33,113,181); }
+.q7 { stroke:rgb(8,81,156); }
+.q8 { stroke:rgb(8,48,107); }
+
+.info{
+  text-anchor:middle;
+  fill:#000;
+}
+</style>
+
+<script src="out.js"></script>
+
+<body>
+<div id="carte" style="display:block;float:left"></div>
+<div id="jauge" style="display:inline"></div>
+<div id="controle" style="display:block;margin:10px">
+  <table>
+    <tr><td colspan = "2"><button id='bini' onclick="initsim()"> Scénario</button></td>
+      <td></td><td></td><td></td><td></td></tr>
+    <tr style='display:none;'><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+    <tr style='display:none;'>
+      <td><button id='l1' onclick="load(1);">Load</button></td>
+      <td><button id='l2' onclick="load(2);">Load</button></td>
+      <td><button id='l3' onclick="load(3);">Load</button></td>
+      <td><button id='l4' onclick="load(4);">Load</button></td>
+      <td><button id='l5' onclick="load(5);">Load</button></td></tr>
+    <tr style='display:none;'>
+      <td><button id='s1' onclick="save(1);">Save</button></td>
+      <td><button id='s2' onclick="save(2);">Save</button></td>
+      <td><button id='s3' onclick="save(3);">Save</button></td>
+      <td><button id='s4' onclick="save(4);">Save</button></td>
+      <td><button id='s5' onclick="save(5);">Save</button></td></tr>
+  </table>
+</div>
+<div id="table" style="display:inline"></div>
+<div id="simulateur" style="display:inline"></div>
+<div id="texte" style="display:inline;min-width:100"></div>
+
+
+</body>
+ 
